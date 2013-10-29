@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="org.intel.identity"
+      version="0.1.0">
+    <name>Intel cloud services Identity</name>
+    <description>Intel cloud services identity plugin</description>
+    <license>MIT</license>
+    <keywords>phonegap,calendar</keywords>
+
+
+    <js-module src="www/intel.js" name="intel">
+        <clobbers target="window.intel" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Intel">
+                <param name="android-package" value="org.intel.identity.IntelSDKPlugin"/>
+            </feature>
+        </config-file>
+
+        <lib-file src="src/android/frameworks/intel.cloudservices-1.0.1079.jar" arch="device" />
+        
+        <source-file src="src/android/IntelSDKPlugin.java" target-dir="src/org/intel/identity" />
+        
+        <!-- Android manifest !-->
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity
+                android:name="com.intel.core.ui.LoginActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait" >
+                <intent-filter>
+                    <category android:name="android.intent.category.DEFAULT" />
+                </intent-filter>
+            </activity>
+        </config-file>
+
+     </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="Intel">
+                <param name="ios-package" value="IntelSDKPlugin" />
+            </feature>
+            <access origin="*intel*" />
+        </config-file>
+
+        <!-- Copy resource file bundle iOS -->
+        <resource-file src="src/ios/bundle/Settings.bundle" />
+
+        <!-- Copy the libraries Context SDK -->
+        <source-file src="src/ios/frameworks/libContext.a" framework="true" />
+
+        <!-- Headers of context framework -->
+        <header-file src="src/ios/frameworks/include/AccessToken.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ActionData.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ActionDataState.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/AppInstance.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Auth.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/AuthInitException.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/BatteryItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/BatteryTrackingService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/BehaviorModels.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CalendarItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CalendarTrackingService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CallItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CallTrackingService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CatalogService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CloudConnector.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CloudConnectorDelegate.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Common.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CommonContextSDK.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ContactsItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ContactsTrackingService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Context.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ContextError.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ContextPusher.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ContextService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ContextUser.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CurationService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CurrentApplicationsItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/CurrentAppsTrackingService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/DeviceInformationItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/FeedbackStructure.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/InstalledApplicationItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/InstalledAppsTrackingService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/IntelCloudServicesPlatformSDK.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Item.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ItemContext.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListActionType.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListCollection.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListCuration.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListDataset.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListenerCallback.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListenerInfo.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListItems.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListItemsCatalog.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListRecommendation.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListSchema.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ListState.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/LocalService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/LocalServiceDelegate.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/LocalServiceStartServiceDelegate.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/LocationClassifierListenerDelegate.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/LocationItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/LocationTrackingService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/LoginDialogDelegate.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/MessageItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Metadata.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/MusicItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/MusicTrackingService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/NetworkItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/NetworkTrackingService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/OnStatusCallback.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/PaginationException.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ParameterException.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Place.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/PointOfInterest.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Profile.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ProfileService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ProfileUpdateException.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ProviderInfo.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ProviderPublishDelegate.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ProviderRegistry.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/PurchaseList.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/QueryItem.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/RateList.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Reachability.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/RecommendationService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ResourcesType.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Results.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ResultsOperation.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ReviewList.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/SensingPusher.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/SensingStates.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/SensingWatch.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Services.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/ServicesUtils.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/SessionHandler.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/SOLStumbler.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/StateDAO.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/StateManager.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/StateManagerDelegate.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/StateProviderDelegate.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/TokenInformation.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Types.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/User.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/UserService.h" target-dir="sdk_headers" />
+        <header-file src="src/ios/frameworks/include/Watches.h" target-dir="sdk_sources" />
+
+        <!--Copy the native files:-->
+        <header-file src="src/ios/IntelSDKPlugin.h" />
+        <source-file src="src/ios/IntelSDKPlugin.m" />
+    </platform>
+</plugin>
