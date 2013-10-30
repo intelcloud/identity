@@ -157,6 +157,13 @@
         <header-file src="src/ios/frameworks/include/UserService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/Watches.h" target-dir="sdk_sources" />
 
+        <framework src="libsqlite3.dylib" />
+        <framework src="MediaPlayer.framework" />
+        <framework src="AddressBook.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="EventKit.framework" />
+        <framework src="SystemConfiguration.framework" />
+
         <!--Copy the native files:-->
         <header-file src="src/ios/IntelSDKPlugin.h" />
         <source-file src="src/ios/IntelSDKPlugin.m" />
