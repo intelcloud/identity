@@ -83,9 +83,7 @@
         <header-file src="src/ios/frameworks/include/ContextService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/ContextUser.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/CurationService.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/CurrentAppsTrackingService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/FeedbackStructure.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/InstalledAppsTrackingService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/IntelCloudServicesPlatformSDK.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/Item.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/ItemContext.h" target-dir="sdk_headers" />
