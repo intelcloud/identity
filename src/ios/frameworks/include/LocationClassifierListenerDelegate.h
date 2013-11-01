@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LocationItem.h"
+#import "SensingStates.h"
 
 @protocol LocationClassifierListenerDelegate <NSObject>
 
@@ -15,6 +15,6 @@
  * Callback function to receive a LocationData event
  * @param locationData with Location info
  */
-- (void)onLocationEvent:(LocationItem*)locationData;
+- (void)onLocationEvent:(Item*)locationData;
 
 @end

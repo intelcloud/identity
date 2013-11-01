@@ -13,7 +13,4 @@
 
 - (void)pushStates;
 
-//Only for the moment
-- (void)pushActionDataState:(ActionDataState*)actionData;
-
 @end

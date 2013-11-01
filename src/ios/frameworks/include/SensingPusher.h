@@ -13,6 +13,8 @@
 @interface SensingPusher : NSObject
 
 @property(nonatomic,strong) CloudConnector *cloudConnector;
+@property(nonatomic,strong) StateDAO *datasource;
+@property(nonatomic,assign) BOOL isAlive;
 
 - (id)initWithCloudConnector:(CloudConnector*)cloudConnector;
 

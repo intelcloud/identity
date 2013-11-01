@@ -209,6 +209,4 @@ typedef void (^ErrorCallback)(NSError*);
        withInitial:(NSData*) iv
         andPadding:(CCOptions) options data:(NSData*) data;
 
-+(NSString*)getDeviceUUID;
-
 @end

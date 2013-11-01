@@ -8,17 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Types.h"
+#import "SensingStates.h"
+#import "ItemContext.h"
 
 @interface Item : NSObject
 
-@property(nonatomic,strong) NSString *mActivity;
-@property(nonatomic,strong) NSNumber *mTimestamp;
-@property(nonatomic,strong) NSNumber *mId;
-@property(nonatomic,assign) BOOL pushToSensingRequired;
-@property(nonatomic,assign) BOOL pushToSituationRequired;
+@property(nonatomic,strong) NSNumber *_id;
+@property(nonatomic,strong) State *state;
+@property(nonatomic,strong) ItemContext *itemContext;
+@property(nonatomic,strong) Type *type;
 
-- (Type*)getStateType;
-
-- (NSMutableDictionary*)toDictionary;
++ (Item *)createItemWithState:(State *)state type:(Type*)type itemContext:(ItemContext *)itemContext;
 
 @end

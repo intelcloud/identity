@@ -61,4 +61,8 @@ enum ACTION_STATE {
 
 + (void)putCallHistory:(NSString *)callNumber;
 
++ (NSString*)makeJson:(NSDictionary*)data;
+
++ (NSDictionary *)parseJson:(NSString *)json;
+
 @end

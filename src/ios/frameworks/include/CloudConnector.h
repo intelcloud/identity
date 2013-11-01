@@ -10,16 +10,18 @@
 #import "StateDAO.h"
 #import "CloudConnectorDelegate.h"
 #import "ActionDataState.h"
+#import "ItemContext.h"
+
+@class ListItems;
 
 @interface CloudConnector : NSObject <CloudConnectorDelegate>
 
 @property(nonatomic,strong) StateDAO *dataSource;
 
-//Delete this code when it's implement StateDAO logic here
-//@property(nonatomic,strong) Item *itemToPush;
-
 - (id)initWithStateDAO:(StateDAO*)datasource;
 
-- (void)pushActionDataState:(ActionDataState*)actionData;
+- (void)pushSensingState:(State *)state;
+
+- (void)pushContextState:(NSArray *)items;
 
 @end

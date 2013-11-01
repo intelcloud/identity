@@ -15,16 +15,14 @@
 
 @interface StateDAO : NSObject <UIApplicationDelegate>
 
-- (void)open;
+@property(nonatomic,strong) NSMutableDictionary *mRecentStates;
 
-- (void)close;
+- (FMDatabase *)createDBInstance;
 
-- (void)storeState:(Item *)item;
+- (BOOL)storeState:(Item *)item;
 
-- (void)deleteState:(Item *)item;
+- (BOOL)deleteState:(Item *)item;
 
-- (NSArray *)getPendingStates;
-
-- (void)exportDB;
+- (NSArray *)getPendingStates:(int)limit;
 
 @end
