@@ -67,19 +67,15 @@
         <header-file src="src/ios/frameworks/include/AppInstance.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/Auth.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/AuthInitException.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/BatteryItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/BatteryTrackingService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/BehaviorModels.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/CalendarItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/CalendarTrackingService.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/CallItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/CallTrackingService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/CatalogService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/CloudConnector.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/CloudConnectorDelegate.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/Common.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/CommonContextSDK.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/ContactsItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/ContactsTrackingService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/Context.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/ContextError.h" target-dir="sdk_headers" />
@@ -87,11 +83,8 @@
         <header-file src="src/ios/frameworks/include/ContextService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/ContextUser.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/CurationService.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/CurrentApplicationsItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/CurrentAppsTrackingService.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/DeviceInformationItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/FeedbackStructure.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/InstalledApplicationItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/InstalledAppsTrackingService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/IntelCloudServicesPlatformSDK.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/Item.h" target-dir="sdk_headers" />
@@ -111,14 +104,10 @@
         <header-file src="src/ios/frameworks/include/LocalServiceDelegate.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/LocalServiceStartServiceDelegate.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/LocationClassifierListenerDelegate.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/LocationItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/LocationTrackingService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/LoginDialogDelegate.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/MessageItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/Metadata.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/MusicItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/MusicTrackingService.h" target-dir="sdk_headers" />
-        <header-file src="src/ios/frameworks/include/NetworkItem.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/NetworkTrackingService.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/OnStatusCallback.h" target-dir="sdk_headers" />
         <header-file src="src/ios/frameworks/include/PaginationException.h" target-dir="sdk_headers" />
